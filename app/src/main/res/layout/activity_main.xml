@@ -7,20 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <wael.emy.bubblenavigationrtl.BubbleNavigationLinearView
+    <wael.emy.bubblenavigationrtl.BubbleNavigationConstraintView
         android:id="@+id/bottom_navigation_view_linear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="8dp"
         android:orientation="horizontal"
-        android:padding="12dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
         android:layout_alignParentBottom="true"
-        android:weightSum="4">
+        app:bnc_mode="packed">
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
             android:id="@+id/l_item_search"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
@@ -30,8 +30,7 @@
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
             android:id="@+id/l_item_profile_list"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
@@ -41,8 +40,7 @@
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
             android:id="@+id/l_item_notification"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
@@ -52,8 +50,7 @@
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
             android:id="@+id/l_item_profile"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
@@ -61,7 +58,7 @@
             app:bt_title="الرئيسية"
             app:bt_badgeTextSize="10dp"
             app:bt_shape="@drawable/transition_background"
-            app:bt_active="true"/>
-    </wael.emy.bubblenavigationrtl.BubbleNavigationLinearView>
+            app:bt_active="true" />
+    </wael.emy.bubblenavigationrtl.BubbleNavigationConstraintView>
 
 </RelativeLayout>

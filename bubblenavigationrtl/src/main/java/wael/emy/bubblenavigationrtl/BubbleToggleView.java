@@ -238,6 +238,12 @@ public class BubbleToggleView extends LinearLayout {
         //change the visibility
 //        titleView.setVisibility(GONE);
 
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            Typeface typeface = getResources().getFont(R.font.gulf);
+            titleView.setTypeface(typeface);
+        }
+
         addView(titleView);
         addView(iconView);
 
@@ -344,21 +350,21 @@ public class BubbleToggleView extends LinearLayout {
     public void activate() {
         ViewUtils.updateDrawableColor(iconView.getDrawable(), bubbleToggleItem.getColorActive());
         isActive = true;
-//        titleView.setVisibility(VISIBLE);
+        titleView.setVisibility(VISIBLE);
         ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
         animator.setDuration(animationDuration);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-//                float value = (float) animation.getAnimatedValue();
-//                titleView.setWidth((int) (measuredTitleWidth * value));
-                //end of animation
-//                if (value >= 1.0f) {
+                float value = (float) animation.getAnimatedValue();
+                titleView.setWidth((int) (measuredTitleWidth * value));
+//                end of animation
+                if (value >= 1.0f) {
 //                    do something
-//                }
+                }
             }
         });
-        animator.start();
+//        animator.start();
 
         if (getBackground() instanceof TransitionDrawable) {
             TransitionDrawable trans = (TransitionDrawable) getBackground();
@@ -386,8 +392,8 @@ public class BubbleToggleView extends LinearLayout {
                 float value = (float) animation.getAnimatedValue();
                 titleView.setWidth((int) (measuredTitleWidth * value));
                 //end of animation
-//                if (value <= 0.0f)
-//                    titleView.setVisibility(GONE);
+                if (value <= 0.0f)
+                    titleView.setVisibility(GONE);
             }
         });
 //        animator.start();

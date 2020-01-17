@@ -1,0 +1,2 @@
+include ':app', ':bubblenavigationrtl'
+rootProject.name='Notebook'

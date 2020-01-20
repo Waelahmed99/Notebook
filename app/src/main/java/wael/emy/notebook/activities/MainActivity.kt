@@ -1,7 +1,8 @@
-package wael.emy.notebook
+package wael.emy.notebook.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import wael.emy.notebook.R
 
 class MainActivity : AppCompatActivity() {
 

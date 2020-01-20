@@ -5,60 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
-    <wael.emy.bubblenavigationrtl.BubbleNavigationConstraintView
-        android:id="@+id/bottom_navigation_view_linear"
+    <FrameLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout"
+        android:layout_above="@id/bottom_bar"/>
+
+    <!--bottom bar  -->
+    <include
+        layout="@layout/bottom_bar"
+        android:id="@+id/bottom_bar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="8dp"
-        android:orientation="horizontal"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:layout_alignParentBottom="true"
-        app:bnc_mode="packed">
-
-        <wael.emy.bubblenavigationrtl.BubbleToggleView
-            android:id="@+id/l_item_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:bt_colorActive="#f95563"
-            app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_more"
-            app:bt_title="المزيد"
-            app:bt_shape="@drawable/transition_background"/>
-
-        <wael.emy.bubblenavigationrtl.BubbleToggleView
-            android:id="@+id/l_item_profile_list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:bt_colorActive="#f95563"
-            app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_my_books"
-            app:bt_title="كتبي"
-            app:bt_shape="@drawable/transition_background"/>
-
-        <wael.emy.bubblenavigationrtl.BubbleToggleView
-            android:id="@+id/l_item_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:bt_colorActive="#f95563"
-            app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_search"
-            app:bt_title="بحث"
-            app:bt_shape="@drawable/transition_background"/>
-
-        <wael.emy.bubblenavigationrtl.BubbleToggleView
-            android:id="@+id/l_item_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:bt_colorActive="#f95563"
-            app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_home"
-            app:bt_title="الرئيسية"
-            app:bt_badgeTextSize="10dp"
-            app:bt_shape="@drawable/transition_background"
-            app:bt_active="true" />
-    </wael.emy.bubblenavigationrtl.BubbleNavigationConstraintView>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "111605914410",
+    "firebase_url": "https://notebook-926b2.firebaseio.com",
+    "project_id": "notebook-926b2",
+    "storage_bucket": "notebook-926b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111605914410:android:3a6b9f06398ed3e0af9c53",
+        "android_client_info": {
+          "package_name": "wael.emy.notebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "111605914410-3lguav2m69er0jvfqjokdalmu5rhmfjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "wael.emy.notebook",
+            "certificate_hash": "da422f8901025729a7e7c68d7ee9884a946c111f"
+          }
+        },
+        {
+          "client_id": "111605914410-idtdhp2dig2u618n1g0acgr6fs42ldm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Pom497uhz79C7MCRJA-kLnJ3S1QPQEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "111605914410-idtdhp2dig2u618n1g0acgr6fs42ldm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,7 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.more_fragment.view.*
+import kotlinx.android.synthetic.main.fragment_more.view.*
 import kotlinx.android.synthetic.main.terms_and_conditions.*
 import wael.emy.notebook.BuildConfig
 import wael.emy.notebook.R
@@ -21,7 +21,7 @@ import wael.emy.notebook.activities.FavoriteActivity
 class MoreFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.more_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_more, container, false)
     }
 
     override fun onViewCreated(v: View, savedInstanceState: Bundle?) {

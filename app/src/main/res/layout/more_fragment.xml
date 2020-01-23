@@ -1,12 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="More"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/ic_more_background">
+
+            <ImageView
+                android:layout_width="71dp"
+                android:layout_height="71dp"
+                android:src="@drawable/oval"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/profile_picture"
+                android:layout_margin="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gulf_regular"
+            android:text="أهلا,"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/profile_name"
+            app:layout_constraintEnd_toStartOf="@+id/profile_picture"
+            app:layout_constraintTop_toTopOf="@+id/profile_picture"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gulf_regular"
+            android:text="مايا علاء"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+            app:layout_constraintRight_toLeftOf="@id/profile_picture"
+            android:layout_marginEnd="15dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/profile_name"
+            app:layout_constraintEnd_toStartOf="@+id/profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_name"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/account_layout"
+        android:layout_margin="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/favorite_layout"
+            android:layout_margin="@dimen/menu_item_margin">
+
+            <ImageView
+                android:id="@+id/love_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/menu_image_padding"
+                android:src="@drawable/ic_love"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/love_img"
+                android:fontFamily="@font/gulf_regular"
+                android:text="مفضلتي"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/love_img"
+                app:layout_constraintEnd_toStartOf="@+id/love_img"
+                app:layout_constraintTop_toTopOf="@+id/love_img"
+                android:layout_marginEnd="@dimen/menu_text_margin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/favorite_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/chat_layout"
+            android:layout_margin="@dimen/menu_item_margin">
+
+            <ImageView
+                android:id="@+id/chat_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/menu_image_padding"
+                android:src="@drawable/ic_chat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/chat_img"
+                android:fontFamily="@font/gulf_regular"
+                android:text="تواصل معنا"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/chat_img"
+                app:layout_constraintEnd_toStartOf="@+id/chat_img"
+                app:layout_constraintTop_toTopOf="@+id/chat_img"
+                android:layout_marginEnd="@dimen/menu_text_margin"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/chat_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/terms_layout"
+            android:layout_margin="@dimen/menu_item_margin">
+
+            <ImageView
+                android:id="@+id/terms_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/menu_image_padding"
+                android:src="@drawable/ic_terms"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/terms_img"
+                android:fontFamily="@font/gulf_regular"
+                android:text="الشروط والأحكام"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@+id/terms_img"
+                app:layout_constraintEnd_toStartOf="@+id/terms_img"
+                app:layout_constraintTop_toTopOf="@+id/terms_img"
+                android:layout_marginEnd="@dimen/menu_text_margin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/terms_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/rate_layout"
+            android:layout_margin="@dimen/menu_item_margin">
+
+            <ImageView
+                android:id="@+id/rate_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/menu_image_padding"
+                android:src="@drawable/ic_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/rate_img"
+                android:fontFamily="@font/gulf_regular"
+                android:text="قيم الأبلكيشن"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@id/rate_img"
+                app:layout_constraintEnd_toStartOf="@id/rate_img"
+                app:layout_constraintTop_toTopOf="@id/rate_img"
+                android:layout_marginEnd="@dimen/menu_text_margin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/rate_layout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/share_layout"
+            android:layout_margin="@dimen/menu_item_margin">
+
+            <ImageView
+                android:id="@+id/share_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/menu_image_padding"
+                android:src="@drawable/ic_share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/share_img"
+                android:fontFamily="@font/gulf_regular"
+                android:text="شارك الأبلكيشن"
+                android:textColor="#000"
+                app:layout_constraintBottom_toBottomOf="@id/share_img"
+                app:layout_constraintEnd_toStartOf="@id/share_img"
+                app:layout_constraintTop_toTopOf="@id/share_img"
+                android:layout_marginEnd="@dimen/menu_text_margin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </RelativeLayout>

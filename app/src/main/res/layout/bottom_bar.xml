@@ -22,7 +22,7 @@
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
             app:bt_icon="@drawable/ic_more"
-            app:bt_title="المزيد"
+            app:bt_title="@string/more"
             app:bt_shape="@drawable/transition_background"/>
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
@@ -32,7 +32,7 @@
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
             app:bt_icon="@drawable/ic_my_books"
-            app:bt_title="كتبي"
+            app:bt_title="@string/my_books"
             app:bt_shape="@drawable/transition_background"/>
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
@@ -42,7 +42,7 @@
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
             app:bt_icon="@drawable/ic_search"
-            app:bt_title="بحث"
+            app:bt_title="@string/search"
             app:bt_shape="@drawable/transition_background"/>
 
         <wael.emy.bubblenavigationrtl.BubbleToggleView
@@ -52,7 +52,7 @@
             app:bt_colorActive="#f95563"
             app:bt_colorInactive="#000000"
             app:bt_icon="@drawable/ic_home"
-            app:bt_title="الرئيسية"
+            app:bt_title="@string/home"
             app:bt_badgeTextSize="10dp"
             app:bt_shape="@drawable/transition_background"
             app:bt_active="true" />

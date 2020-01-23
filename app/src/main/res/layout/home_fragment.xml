@@ -9,7 +9,7 @@
         android:textSize="22sp"
         android:textColor="#000"
         android:fontFamily="@font/gulf_bold"
-        android:text="الرئيسية"
+        android:text="@string/home"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"/>
 </RelativeLayout>

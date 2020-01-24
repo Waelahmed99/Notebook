@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        navigateToFragment(maxPosition)
+        navigateToFragment(maxPosition - 1)
         bottom_navigation.setNavigationChangeListener { _, position ->
             navigateToFragment(position)
         }

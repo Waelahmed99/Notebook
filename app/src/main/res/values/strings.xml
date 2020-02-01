@@ -9,6 +9,13 @@
     <string name="my_favorite">مفضلتي</string>
     <string name="contact_us">تواصل معنا</string>
     <string name="terms">الشروط والأحكام</string>
-    <string name="rate_application">قيم الأبلكيشن</string>
-    <string name="share_application">شارك الأبلكيشن</string>
+    <string name="rate_application">قيم التطبيق</string>
+    <string name="share_application">شارك التطبيق</string>
+    <string name="all">الكل</string>
+    <string name="culture">ثقافة عامة</string>
+    <string name="fiction">خيال علمي</string>
+    <string name="philosophy">فلسفة</string>
+    <string name="most_recent">الأحدث قراءة</string>
+    <string name="most_buying">الأكثر مبيعاً</string>
+    <string name="quote_text">كيف احتملنا وعشنا وانزلقت شربة الماء من الحلق دون ان نشرق بها ونختنق؟ وما جدوى استحضار ما تحملناه وإعادته بالكلام؟ عند موت من نحب نكفنه. نلفه برحمة ونحفر في الارض عميقا...</string>
 </resources>

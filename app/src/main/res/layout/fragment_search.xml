@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f4f4f4">
@@ -29,7 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/search_heading_layout"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         app:cardCornerRadius="20dp"
         app:cardBackgroundColor="@android:color/transparent"
         android:id="@+id/search_layout">
@@ -40,7 +40,7 @@
             android:background="#fff">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/search_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@null"
@@ -81,11 +81,15 @@
 
     </androidx.cardview.widget.CardView>
 
-    <include layout="@layout/book_search_model"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_below="@id/search_layout"/>
+        android:layout_height="match_parent"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/search_layout"
+        android:id="@+id/searchRecycler"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
 
 </RelativeLayout>
